@@ -87,15 +87,29 @@ public class OnlineLibrarySystem {
         OnlineLibrarySystem library = new OnlineLibrarySystem();
         User user1 = new User("user123");
 
+        System.err.println(".................................");
+        System.err.println("\nBORROW BOOK \n");
         library.checkAvailability("book1");
         library.borrowBook("book1", user1);
+
+        System.err.println();
+        System.err.println(".................................");
+        System.err.println("\nRETURN BOOK \n ");
         library.checkAvailability("book1");
         library.returnBook("book1", user1);
         library.checkAvailability("book1");
 
+        System.err.println();
+        System.err.println(".................................");
+        System.err.println("\nINVARIANT \n");
         library.invariant();
 
+        System.err.println();
+        System.err.println(".................................");
+        System.err.println("\nBORROW BOOK(not exist) \n");
         // Test failure case: book does not exist
         library.borrowBook("book4", user1);
+
+        System.err.println(".................................");
     }
 }
